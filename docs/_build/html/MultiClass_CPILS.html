@@ -1,0 +1,487 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MultiClass_CPILS module &mdash; Multi_Class-CPILS 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="cpils module" href="cpils.html" />
+    <link rel="prev" title="Multi_Class_CP-ILS" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Multi_Class-CPILS
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Multi_Class_CP-ILS</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">MultiClass_CPILS module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#MultiClass_CPILS.MultiClass_CP_ILS"><code class="docutils literal notranslate"><span class="pre">MultiClass_CP_ILS</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#MultiClass_CPILS.MultiClass_CP_ILS.MODE_1V1"><code class="docutils literal notranslate"><span class="pre">MultiClass_CP_ILS.MODE_1V1</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MultiClass_CPILS.MultiClass_CP_ILS.MODE_1VALL"><code class="docutils literal notranslate"><span class="pre">MultiClass_CP_ILS.MODE_1VALL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MultiClass_CPILS.MultiClass_CP_ILS.MODE_1VALL_SPEC"><code class="docutils literal notranslate"><span class="pre">MultiClass_CP_ILS.MODE_1VALL_SPEC</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MultiClass_CPILS.MultiClass_CP_ILS.MODE_ALLV1"><code class="docutils literal notranslate"><span class="pre">MultiClass_CP_ILS.MODE_ALLV1</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MultiClass_CPILS.MultiClass_CP_ILS.MODE_ALL_SPECV1"><code class="docutils literal notranslate"><span class="pre">MultiClass_CP_ILS.MODE_ALL_SPECV1</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MultiClass_CPILS.MultiClass_CP_ILS.cdist_sample_distance"><code class="docutils literal notranslate"><span class="pre">MultiClass_CP_ILS.cdist_sample_distance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MultiClass_CPILS.MultiClass_CP_ILS.execute_ranking_of_counterfactuals"><code class="docutils literal notranslate"><span class="pre">MultiClass_CP_ILS.execute_ranking_of_counterfactuals()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MultiClass_CPILS.MultiClass_CP_ILS.execute_testing_on_data"><code class="docutils literal notranslate"><span class="pre">MultiClass_CP_ILS.execute_testing_on_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MultiClass_CPILS.MultiClass_CP_ILS.generate_counterfactuals"><code class="docutils literal notranslate"><span class="pre">MultiClass_CP_ILS.generate_counterfactuals()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MultiClass_CPILS.MultiClass_CP_ILS.generate_ls"><code class="docutils literal notranslate"><span class="pre">MultiClass_CP_ILS.generate_ls()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MultiClass_CPILS.MultiClass_CP_ILS.get_ls_of_class"><code class="docutils literal notranslate"><span class="pre">MultiClass_CP_ILS.get_ls_of_class()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MultiClass_CPILS.MultiClass_CP_ILS.get_ls_of_not_class"><code class="docutils literal notranslate"><span class="pre">MultiClass_CP_ILS.get_ls_of_not_class()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MultiClass_CPILS.MultiClass_CP_ILS.load_latent_spaces"><code class="docutils literal notranslate"><span class="pre">MultiClass_CP_ILS.load_latent_spaces()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MultiClass_CPILS.MultiClass_CP_ILS.plot_ls_comb"><code class="docutils literal notranslate"><span class="pre">MultiClass_CP_ILS.plot_ls_comb()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MultiClass_CPILS.MultiClass_CP_ILS.plot_ls_comb_compare"><code class="docutils literal notranslate"><span class="pre">MultiClass_CP_ILS.plot_ls_comb_compare()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MultiClass_CPILS.MultiClass_CP_ILS.plot_ls_training_losses"><code class="docutils literal notranslate"><span class="pre">MultiClass_CP_ILS.plot_ls_training_losses()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#MultiClass_CPILS.MultiClass_CP_ILS.save_latent_spaces"><code class="docutils literal notranslate"><span class="pre">MultiClass_CP_ILS.save_latent_spaces()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cpils.html">cpils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">utils module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Multi_Class-CPILS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">Multi_Class_CP-ILS</a></li>
+      <li class="breadcrumb-item active">MultiClass_CPILS module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/MultiClass_CPILS.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-MultiClass_CPILS">
+<span id="multiclass-cpils-module"></span><h1>MultiClass_CPILS module<a class="headerlink" href="#module-MultiClass_CPILS" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="MultiClass_CPILS.MultiClass_CP_ILS">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">MultiClass_CPILS.</span></span><span class="sig-name descname"><span class="pre">MultiClass_CP_ILS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bbox_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BaseEstimator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train_set</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_set</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bbox_structure</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BaseEstimator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_class</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'class'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'1v1'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/MultiClass_CPILS.html#MultiClass_CP_ILS"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#MultiClass_CPILS.MultiClass_CP_ILS" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A multi-class extension of the CP_ILS method designed for binary classification.</p>
+<p>This class handles multi-class classification scenarios by transforming them into binary classification problems in different modes.
+The supported modes include 1v1, 1vAll, 1vAll_Spec, Allv1, and All_Specv1, which specifies how the multi-class problem is decomposed into binary ones.</p>
+<section id="constants">
+<h2>Constants:<a class="headerlink" href="#constants" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>MODE_1V1<span class="classifier">str</span></dt><dd><p>Constant representing the 1-vs-1 mode.</p>
+</dd>
+<dt>MODE_1VALL<span class="classifier">str</span></dt><dd><p>Constant representing the 1-vs-All mode.</p>
+</dd>
+<dt>MODE_1VALL_SPEC<span class="classifier">str</span></dt><dd><p>Constant representing the 1-vs-All (Specific) mode.</p>
+</dd>
+<dt>MODE_ALLV1<span class="classifier">str</span></dt><dd><p>Constant representing the All-vs-1 mode.</p>
+</dd>
+<dt>MODE_ALL_SPECV1<span class="classifier">str</span></dt><dd><p>Constant representing the All-vs-1 (Specific) mode.</p>
+</dd>
+</dl>
+</section>
+<section id="attributes">
+<h2>Attributes:<a class="headerlink" href="#attributes" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>flatten<span class="classifier">function</span></dt><dd><p>A lambda function to flatten multi-dimensional arrays.</p>
+</dd>
+<dt>__mbbox_model<span class="classifier">model</span></dt><dd><p>The multi-class black-box classifier model used for predictions, also referred as MBB</p>
+</dd>
+<dt>__train_set<span class="classifier">pd.DataFrame</span></dt><dd><p>The training dataset used to generate latent spaces.</p>
+</dd>
+<dt>__test_set<span class="classifier">pd.DataFrame</span></dt><dd><p>The test dataset used for validation and counterfactual generation.</p>
+</dd>
+<dt>__mode<span class="classifier">str</span></dt><dd><p>The mode of classification, which defines how the multi-class problem is treated.</p>
+</dd>
+<dt>__class_combinations<span class="classifier">list</span></dt><dd><p>A list of class combinations generated according to the mode.</p>
+</dd>
+<dt>__dict_train_datasets<span class="classifier">dict</span></dt><dd><p>A dictionary storing the training datasets for each class combination.</p>
+</dd>
+<dt>__dict_test_datasets<span class="classifier">dict</span></dt><dd><p>A dictionary storing the test datasets for each class combination.</p>
+</dd>
+<dt>__dict_latent_spaces<span class="classifier">dict</span></dt><dd><p>A dictionary storing the latent spaces for each class combination.</p>
+</dd>
+<dt>__hex_colors_for_classes<span class="classifier">dict</span></dt><dd><p>A dictionary storing the hexadecimal colors for each class, used for plotting points with same class color in all exp.</p>
+</dd>
+</dl>
+</section>
+<section id="public-methods">
+<h2>Public Methods:<a class="headerlink" href="#public-methods" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>__init__(self, bbox_model, train_set, test_set, target_class=”class”, mode=MODE_1V1):</dt><dd><p>Initializes the MultiClass_CP_ILS object with the given dataset, model, and classification mode.</p>
+</dd>
+<dt>generate_ls(self, latent_dim_k=2, early_stop_param=5, timer=False):</dt><dd><p>Generates latent spaces for each class combination using CP-ILS method, leveraging a black-box model.</p>
+</dd>
+<dt>generate_counterfactuals(self, test_instance, change_f, max_f, counter_classes=-1, filtering_mode=””, debug=True):</dt><dd><p>Generates counterfactual explanations for a given test instance by modifying the input features for a specific mode</p>
+</dd>
+<dt>execute_ranking_of_counterfactuals(self, test_instance, df_counterfactuals, ranking=”proximity”, group_by_class=True, top_k=-1):</dt><dd><p>Function to rank with a certain ranking criterion a list of counterfactuals, obtained respect to a test_instance</p>
+</dd>
+<dt>plot_ls_comb(self,target,comb=None,class_name=None):</dt><dd><p>Function to plot a specific combination of latent space callable from external.</p>
+</dd>
+<dt>plot_ls_comb_compare(self,comb=None,class_name=None):</dt><dd><p>Function to plot and compare specific combination of latent space callable from external.</p>
+</dd>
+<dt>plot_ls_training_losses(self,comb=None,class_name=None):</dt><dd><p>Function to plot specific combination of train_test losses callable from external.</p>
+</dd>
+<dt>execute_testing_on_data(self,test_name,test_instances,change_f,max_f,filtering_mode=”acceptable”,debug=False):</dt><dd><p>Automatic procedure to print on external files the counterfactuals main information and treat them separately</p>
+</dd>
+<dt>save_latent_spaces(self, filename):</dt><dd><p>Saves the latent spaces to a file using pickle.</p>
+</dd>
+<dt>load_latent_spaces(self, filename):</dt><dd><p>Loads latent spaces from a file using pickle.</p>
+</dd>
+<dt>get_ls_of_class(self, class_name):</dt><dd><p>Returns the latent spaces specific to a given class.</p>
+</dd>
+<dt>get_ls_of_not_class(self, class_name):</dt><dd><p>Returns the latent spaces for all classes except the specified one.</p>
+</dd>
+</dl>
+</section>
+<section id="private-methods">
+<h2>Private Methods:<a class="headerlink" href="#private-methods" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>__adjust_target_class(self, target_name, train_set,test_set):</dt><dd><p>Adjusts the target class column to be the last column in the dataset and renames it to ‘class’.</p>
+</dd>
+<dt>__build_dataset_idx_num_cat(self):</dt><dd><p>Builds index lists for numerical and categorical attributes in the dataset.</p>
+</dd>
+<dt>__assign_color_to_classes(self):</dt><dd><p>Assigns a unique color to each class using HLS color space.</p>
+</dd>
+<dt>__prepare_datasets(self):</dt><dd><p>Prepares datasets for the specified classification mode by splitting them into appropriate combinations of classes.</p>
+</dd>
+<dt>__generate_counterfactuals_1v1(self,test_instance,change_f,max_f,y_pred,counter_classes=-1,filtering_mode=””,debug=True):</dt><dd><p>Generates counterfactual explanations for a given test instance using the modality 1v1</p>
+</dd>
+<dt>__generate_counterfactuals_1vAll_AllSpec(self,test_instance,change_f,max_f,y_pred,counter_classes=-1,filtering_mode=””,debug=True):</dt><dd><p>Generates counterfactual explanations for a given test instance using the modality 1vALL or 1vALLSpec</p>
+</dd>
+<dt>__generate_counterfactuals_Allv1_Allv1Spec(self,test_instance,change_f,max_f,y_pred,counter_classes=-1,filtering_mode=””,debug=True):</dt><dd><p>Generates counterfactual explanations for a given test instance using the modality Allv1 or AllSpecV1</p>
+</dd>
+<dt>__plot_ls_directions(self,latent,X_instances,title=””):</dt><dd><p>Function to plot the binary classifier counterfactuals direction in a latent space</p>
+</dd>
+<dt>__plot_ls_class_scatter_plot(self,Z_train,Y_labels,title=””,target=”classes_MBB”,comb=(“None”,”All”)):</dt><dd><p>Function to plot the 2D scatter plot of a latent space, optionally targeting a specific classes combination</p>
+</dd>
+<dt>__prepare_ls_class_scatter_plot(self,ax,Z_train,Y_labels,title=””,comb=(“None”,”All”)):</dt><dd><p>Function to plot the 2D scatter plot of a latent space comparing the MBB with the BBB</p>
+</dd>
+<dt>__plot_ls_losses(self,losses,title=””):</dt><dd><p>Function to plot the losses of training and testing during the latent spaces generations</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="MultiClass_CPILS.MultiClass_CP_ILS.MODE_1V1">
+<span class="sig-name descname"><span class="pre">MODE_1V1</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'1v1'</span></em><a class="headerlink" href="#MultiClass_CPILS.MultiClass_CP_ILS.MODE_1V1" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="MultiClass_CPILS.MultiClass_CP_ILS.MODE_1VALL">
+<span class="sig-name descname"><span class="pre">MODE_1VALL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'1vAll'</span></em><a class="headerlink" href="#MultiClass_CPILS.MultiClass_CP_ILS.MODE_1VALL" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="MultiClass_CPILS.MultiClass_CP_ILS.MODE_1VALL_SPEC">
+<span class="sig-name descname"><span class="pre">MODE_1VALL_SPEC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'1vAll_Spec'</span></em><a class="headerlink" href="#MultiClass_CPILS.MultiClass_CP_ILS.MODE_1VALL_SPEC" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="MultiClass_CPILS.MultiClass_CP_ILS.MODE_ALLV1">
+<span class="sig-name descname"><span class="pre">MODE_ALLV1</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Allv1'</span></em><a class="headerlink" href="#MultiClass_CPILS.MultiClass_CP_ILS.MODE_ALLV1" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="MultiClass_CPILS.MultiClass_CP_ILS.MODE_ALL_SPECV1">
+<span class="sig-name descname"><span class="pre">MODE_ALL_SPECV1</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'All_Specv1'</span></em><a class="headerlink" href="#MultiClass_CPILS.MultiClass_CP_ILS.MODE_ALL_SPECV1" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="MultiClass_CPILS.MultiClass_CP_ILS.cdist_sample_distance">
+<span class="sig-name descname"><span class="pre">cdist_sample_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">XA</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">XB</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">('euclidean',</span> <span class="pre">'jaccard')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/MultiClass_CPILS.html#MultiClass_CP_ILS.cdist_sample_distance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#MultiClass_CPILS.MultiClass_CP_ILS.cdist_sample_distance" title="Link to this definition"></a></dt>
+<dd><p>The distance function used to measure the distance among to 2 distinct samples; the same used in original paper
+combining Hamming distance for categorical values and cosine distance for continous attribute.
+This method can be applied simultaneously to multiple points at time, returing a matrix of distances.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>XA</strong> (<em>pd.DataFrame</em>) – representing the first sample instance, can be used with multiple rows</p></li>
+<li><p><strong>XB</strong> (<em>pd.DataFrame</em>) – representing the second sample instance can be used with multiple rows</p></li>
+<li><p><strong>metric</strong> (<em>str</em>) – this is the criterion used for continuous and categorical variables</p></li>
+<li><p><strong>w</strong> (<em>Any</em>) – The weight vector for metrics that support weights (e.g., Minkowski)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a numerical array of distances accordingly to metric between XA and XB</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="MultiClass_CPILS.MultiClass_CP_ILS.execute_ranking_of_counterfactuals">
+<span class="sig-name descname"><span class="pre">execute_ranking_of_counterfactuals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df_counterfactuals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ranking</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'proximity'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_by_class</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top_k</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/MultiClass_CPILS.html#MultiClass_CP_ILS.execute_ranking_of_counterfactuals"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#MultiClass_CPILS.MultiClass_CP_ILS.execute_ranking_of_counterfactuals" title="Link to this definition"></a></dt>
+<dd><p>This function is used for ranking a list of counterfactuals related to a target test instance.
+It gives the possibility to rank counterfactuals per proximity or per probability class prediction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>test_instance</strong> (<em>pd.DataFrame</em>) – the instance related to the counterfactuals list, used to determine proximity</p></li>
+<li><p><strong>df_counterfactuals</strong> (<em>pd.DataFrame</em>) – the list of counterfactuals that needs to be ranked</p></li>
+<li><p><strong>ranking</strong> (<em>str</em>) – the modality of ranking; proximity-&gt; use the distance between the counters and the test_instance,
+accuracy pushes up the counterfactuals with higher prediction probability, default proximity</p></li>
+<li><p><strong>group_by_class</strong> (<em>bool</em>) – specifies if the results are presented ranked per class or not, default True</p></li>
+<li><p><strong>top_k</strong> (<em>int</em>) – specifies the number of counterfactulas to show at maximum in the final view</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>It return a list of ranked counterfactuals accordingly to specified criterion.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="MultiClass_CPILS.MultiClass_CP_ILS.execute_testing_on_data">
+<span class="sig-name descname"><span class="pre">execute_testing_on_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_instances</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">change_f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filtering_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'acceptable'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/MultiClass_CPILS.html#MultiClass_CP_ILS.execute_testing_on_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#MultiClass_CPILS.MultiClass_CP_ILS.execute_testing_on_data" title="Link to this definition"></a></dt>
+<dd><p>This function call iteratively the methods to generate the counterfactuals and save all the results on external files
+specified by input parameters, in order to make a post-hoc analyis of the goodness of used methods.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>test_name</strong> – the name to be used as suffix in the generation of the files</p></li>
+<li><p><strong>test_instances</strong> – the list of instances involved during the test of the methods</p></li>
+<li><p><strong>change_f</strong> – the list of feature that can be modifiable during the procedure of generation</p></li>
+<li><p><strong>max_f</strong> – it is the maximum number of attribute that can be changed togheter from the change_f list</p></li>
+<li><p><strong>filtering_mode</strong> – (optionally) it indicate the modality of possible filtering of counterfactuals ‘acceptable’,’specific’,default ‘acceptable’</p></li>
+<li><p><strong>debug</strong> – boolean value to print on console debug informations</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="MultiClass_CPILS.MultiClass_CP_ILS.generate_counterfactuals">
+<span class="sig-name descname"><span class="pre">generate_counterfactuals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_instance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">change_f</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_f</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">counter_classes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filtering_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/MultiClass_CPILS.html#MultiClass_CP_ILS.generate_counterfactuals"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#MultiClass_CPILS.MultiClass_CP_ILS.generate_counterfactuals" title="Link to this definition"></a></dt>
+<dd><p>Main function to generate counterfactuals for a specific instance. This function should be called after having trained all the latent spaces.
+Depending on the modality initially chosen, it applies the default generate counterfacutal method on each combination.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>test_instance</strong> (<em>pd.DataFrame</em>) – the instance interested in counterfactuals explanations</p></li>
+<li><p><strong>change_f</strong> (<em>List</em><em>[</em><em>int</em><em>]</em>) – the list of feature that can be modifiable during the procedure of generation</p></li>
+<li><p><strong>max_f</strong> (<em>int</em>) – it is the maximum number of attribute that can be changed togheter from the change_f list</p></li>
+<li><p><strong>counter_classes</strong> (<em>Any</em>) – it specify a list of possible classes values interested in generation of counterfactuals or -1 if all available</p></li>
+<li><p><strong>filtering_mode</strong> (<em>str</em>) – (optionally) it indicate the modality of possible filtering of counterfactuals ‘acceptable’,’specific’</p></li>
+<li><p><strong>debug</strong> (<em>bool</em>) – boolean value to print on console debug informations</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a list of counterfactuals grouped by class, cotaining information about all the generated, the predictions of the multi-class and binary classifiers
+and the filtered ones.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="MultiClass_CPILS.MultiClass_CP_ILS.generate_ls">
+<span class="sig-name descname"><span class="pre">generate_ls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">latent_dim_k</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">early_stop_param</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/MultiClass_CPILS.html#MultiClass_CP_ILS.generate_ls"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#MultiClass_CPILS.MultiClass_CP_ILS.generate_ls" title="Link to this definition"></a></dt>
+<dd><p>This method compute the latent spaces for all the combinations of classes according to the initial selected modality
+and using as training and testing dataset the specific prepared for each combination.
+For each combination, a new black box classifier is trained with the sub-selected training samples, then the CP_ILS
+classical method is called in order to build this specific binary latent space.</p>
+<p>The results of binary black box, latent space and training values are saved into self.__dict_latent_spaces dict variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>latent_dim_k</strong> (<em>int</em>) – the dimension K of each generated latent space by default it is equal to 2</p></li>
+<li><p><strong>early_stop_param</strong> (<em>int</em>) – the condition to avoid to generate too many iterations in case of no improvments, defulat 5 epochs.</p></li>
+<li><p><strong>timer</strong> (<em>bool</em>) – boolean variable to take note of the time elapsed for training</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="MultiClass_CPILS.MultiClass_CP_ILS.get_ls_of_class">
+<span class="sig-name descname"><span class="pre">get_ls_of_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">class_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/MultiClass_CPILS.html#MultiClass_CP_ILS.get_ls_of_class"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#MultiClass_CPILS.MultiClass_CP_ILS.get_ls_of_class" title="Link to this definition"></a></dt>
+<dd><p>Method to return the latent space where the class with class_name is involved.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>class_name</strong> (<em>str</em>) – The name of the class to be reserched in latents spaces combinations</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A list of tuples, where each tuple contains a latent space key and its corresponding value,</dt><dd><p>filtered to include only those where class_name is present in the key.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="MultiClass_CPILS.MultiClass_CP_ILS.get_ls_of_not_class">
+<span class="sig-name descname"><span class="pre">get_ls_of_not_class</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">class_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/MultiClass_CPILS.html#MultiClass_CP_ILS.get_ls_of_not_class"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#MultiClass_CPILS.MultiClass_CP_ILS.get_ls_of_not_class" title="Link to this definition"></a></dt>
+<dd><p>Method to return the latent space where the class with class_name is NOT involved.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>class_name</strong> (<em>str</em>) – The name of the class to be researched in latent space combinations.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A list of tuples, where each tuple contains a latent space key and its corresponding value,</dt><dd><p>filtered to include only those where class_name is NOT present in the key.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="MultiClass_CPILS.MultiClass_CP_ILS.load_latent_spaces">
+<span class="sig-name descname"><span class="pre">load_latent_spaces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/MultiClass_CPILS.html#MultiClass_CP_ILS.load_latent_spaces"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#MultiClass_CPILS.MultiClass_CP_ILS.load_latent_spaces" title="Link to this definition"></a></dt>
+<dd><p>Load the generated latent spaces from a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – The string containing the path to load the file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="MultiClass_CPILS.MultiClass_CP_ILS.plot_ls_comb">
+<span class="sig-name descname"><span class="pre">plot_ls_comb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">class_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/MultiClass_CPILS.html#MultiClass_CP_ILS.plot_ls_comb"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#MultiClass_CPILS.MultiClass_CP_ILS.plot_ls_comb" title="Link to this definition"></a></dt>
+<dd><p>Function callable from outside to plot a scatter plot of specific combination or class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target</strong> (<em>str</em>) – must specify the type of plot only possibles directions,classes_BBB or classes_MBB</p></li>
+<li><p><strong>comb</strong> (<em>tuple</em>) – the specific combination involved in the plot</p></li>
+<li><p><strong>class_name</strong> (<em>str</em>) – the specific class involved in the combinatio to be plotted</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="MultiClass_CPILS.MultiClass_CP_ILS.plot_ls_comb_compare">
+<span class="sig-name descname"><span class="pre">plot_ls_comb_compare</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">comb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">class_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/MultiClass_CPILS.html#MultiClass_CP_ILS.plot_ls_comb_compare"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#MultiClass_CPILS.MultiClass_CP_ILS.plot_ls_comb_compare" title="Link to this definition"></a></dt>
+<dd><p>Function callable from outside to plot a comparison of scatter plots (multi-class and binary) for specific combination or class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>comb</strong> (<em>tuple</em>) – the specific combination involved in the plot</p></li>
+<li><p><strong>class_name</strong> (<em>str</em>) – the specific class involved in the combinatio to be plotted</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="MultiClass_CPILS.MultiClass_CP_ILS.plot_ls_training_losses">
+<span class="sig-name descname"><span class="pre">plot_ls_training_losses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">comb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">class_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/MultiClass_CPILS.html#MultiClass_CP_ILS.plot_ls_training_losses"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#MultiClass_CPILS.MultiClass_CP_ILS.plot_ls_training_losses" title="Link to this definition"></a></dt>
+<dd><p>Function callable from outside to plot the curves of training and validation losses during generation of latent spaces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>comb</strong> – the specific combination involved in the plot</p></li>
+<li><p><strong>class_name</strong> – the specific class involved in the combinatio to be plotted</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="MultiClass_CPILS.MultiClass_CP_ILS.save_latent_spaces">
+<span class="sig-name descname"><span class="pre">save_latent_spaces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/MultiClass_CPILS.html#MultiClass_CP_ILS.save_latent_spaces"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#MultiClass_CPILS.MultiClass_CP_ILS.save_latent_spaces" title="Link to this definition"></a></dt>
+<dd><p>Save the generated latent spaces into a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – The path where the latent spaces will be saved.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="Multi_Class_CP-ILS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cpils.html" class="btn btn-neutral float-right" title="cpils module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Davide Vigna.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
